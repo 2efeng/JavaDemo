@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="persistenceUnit" transaction-type="RESOURCE_LOCAL">
+        <properties>
+            <!--sql server-->
+            <!--<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>-->
+            <!--mysql-->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.use_sql_comments" value="false"/>
+            <property name="hibernate.jdbc.use_getGeneratedKeys" value="false" />
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.jdbc.batch_size" value="10" /> <!-- 批量数据操作，累计到n条SQL后再批量提交 -->
+        </properties>
+    </persistence-unit>
+</persistence>
